@@ -1,11 +1,20 @@
 [
   {
-    "Title": "Berlin Brass",
-    "Company": "Orchestral Tools",
-    "Image": "http://www.orchestraltools.com/libraries/berlin_brass_files/stacks_image_93.png",
-    "Url": "www.orchestraltools.com",
-    "Ensemble-Patch": "No",
-    "Price": "799€ + Vat",
-    "Sections": ["Trombones", "Trumpets", "Horns", "Tuba"]
+    "title": "Berlin Brass",
+    "company": "Orchestral Tools",
+    "image": "http://www.orchestraltools.com/libraries/berlin_brass_files/stacks_image_93.png",
+    "url": "www.orchestraltools.com",
+    "ensemble-patch": "No",
+    "price": "799€ + Vat",
+    "sections": ["Trombones ,", "Trumpets", "Horns", "Tuba"]
+  },
+  {
+    "title": "Spitfire Symphonic Brass",
+    "company": "Spitfire Audio",
+    "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/331/smc0214_portrait_catview.jpg",
+    "company Url": "www.spitfireaudio.com",
+    "ensemble Patch": "No",
+    "price": "699 Euro incl. Vat",
+    "sections": ["Trombones", "Trumpets", "Horns", "Tuba", "Cimbassi"]
   }
 ]

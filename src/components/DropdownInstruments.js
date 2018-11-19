@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import libraryData from '../resources/library-data'
+import libraryData from '../resources/library-data.json'
 import { array } from '@storybook/addon-knobs'
 
 class DropdownInstruments extends React.Component {
-  instruments = ['Trombone', 'Horn', 'Trumpet']
   render() {
     return (
       <div>
-        <label for="Instrument Select">Choose a instrument:</label>
+        <label for="Instrument Select">Choose an instrument:</label>
         <select>
-          {this.instruments.map(instrument => (
-            <option>{instrument}</option>
+          {libraryData.map(instrument => (
+            <option>{instrument.sections.map}</option>
           ))}
         </select>
       </div>
