@@ -49,7 +49,7 @@ class App extends Component {
         url={libraryInformation.url}
         ensemblepatch={libraryInformation.ensemblepatch}
         price={libraryInformation.price}
-        sections={libraryInformation.sections}
+        sections={libraryInformation.sections.join('-')}
       />
     ))
   }

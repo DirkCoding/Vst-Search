@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import libraryData from '../resources/library-data.json'
 
 const Card = styled.section`
   display: grid;
@@ -32,6 +31,15 @@ const Hyperlink = styled.a`
   font-size: 12px;
   grid-column: 1/4;
 `
+const Image = styled.img`
+  position: relative;
+  float: left;
+  width: 100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+`
 
 class Createcard extends Component {
   render() {
@@ -49,7 +57,7 @@ class Createcard extends Component {
       <Card>
         <Title>Library: {title}</Title>
         <Company>Company: {company}</Company>
-        <Paragraph>{image}</Paragraph>
+        <Image src={image} />
         <Hyperlink>Link to manufacturer: {url}</Hyperlink>
         <Paragraph>Ensemble Patch available: {ensemblepatch}</Paragraph>
         <Paragraph>Price: {price}</Paragraph>
