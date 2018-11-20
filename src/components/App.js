@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
 // import styled from 'styled-components'
 // import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
+
 import DropdownInstruments from './DropdownInstruments'
+import Createcard from './Createcard'
+
+import libraryData from '../resources/library-data.json'
+
 /*import Home from './Home'
 import Config from './Config'*/
 
@@ -34,8 +39,28 @@ import Config from './Config'*/
   }
 `*/
 
-export default class App extends Component {
+class App extends Component {
+  createInformationCard() {
+    return libraryData.map(libraryInformation => (
+      <Createcard
+        title={libraryInformation.title}
+        company={libraryInformation.company}
+        image={libraryInformation.image}
+        url={libraryInformation.url}
+        ensemblepatch={libraryInformation.ensemblepatch}
+        price={libraryInformation.price}
+        sections={libraryInformation.sections}
+      />
+    ))
+  }
+
   render() {
-    return <DropdownInstruments />
+    return (
+      <React.Fragment>
+        <DropdownInstruments />
+        {this.createInformationCard()}
+      </React.Fragment>
+    )
   }
 }
+export default App
