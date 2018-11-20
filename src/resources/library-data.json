@@ -16,5 +16,91 @@
     "ensemble Patch": "No",
     "price": "699 Euro incl. Vat",
     "sections": ["Trombones", "Trumpets", "Horns", "Tuba", "Cimbassi"]
+  },
+  {
+    "title": "Cinebrass Core",
+    "company": "Cinesamples",
+    "image": "https://cinesamples.com/img/product/image/small/mqdymg34bbtrjhftpp9k0oamk93.png",
+    "company Url": "www.cinesamples.com",
+    "ensemble Patch": "No",
+    "price": "399$ +Vat",
+    "sections": ["Trombones", "Trumpets", "Horns", "Tuba"]
+  },
+  {
+    "title": "Berlin Strings",
+    "company": "Orchestral Tools",
+    "image": "http://www.orchestraltools.com/libraries/berlin_brass_files/stacks_image_93.png",
+    "company Url": "www.orchestraltools.com",
+    "ensemble Patch": "Yes",
+    "price": "840€ +Vat",
+    "section Sizes": "8, 6, 5, 5, 4",
+    "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
+  },
+  {
+    "title": "Spitfire Symphonic Strings",
+    "company": "Spitfire Audio",
+    "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/357/smc0224_portrait_catview.jpg",
+    "company Url": "www.spitfireaudio.com",
+    "ensemble Patch": "Yes",
+    "price": "799€ incl. Vat",
+    "section Sizes": "16, 14, 12, 10, 8",
+    "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
+  },
+  {
+    "title": "Cinestrings Core",
+    "company": "Cinesamples",
+    "image": "https://cinesamples.com/img/product/image/small/9jqxx4ebnns3vtjalqzw0dyj972.png",
+    "company Url": "www.cinesamples.com",
+    "ensemble Patch": "Yes",
+    "price": "499$ +Vat",
+    "section Sizes": "16, 12, 10, 10, 7",
+    "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
+  },
+  {
+    "title": "Berlin  Woodwinds Revive",
+    "company": "Orchestral Tools",
+    "image": "http://www.orchestraltools.com/libraries/berlin_woodwinds_revive_files/stacks_image_93.png",
+    "company Url": "www.orchestraltools.com",
+    "ensemble Patch": "Yes",
+    "price": "649€ +Vat",
+    "sections": [
+      "Piccolo",
+      "Flutes",
+      "Alto Flute",
+      "Oboe",
+      "English Horn",
+      "Clarinet",
+      "Bassoon"
+    ]
+  },
+  {
+    "title": "Spitfire Symphonic Woodwinds",
+    "company": "Spitfire Audio",
+    "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/380/smc0215_portrait_catview.jpg",
+    "company Url": "www.spitfireaudio.com",
+    "rnsemble Patch": "No",
+    "price": "599€ incl. Vat",
+    "sections": [
+      "Piccolo",
+      "Flutes",
+      "Alto Flute",
+      "Bass Flute",
+      "Oboe",
+      "English Horn",
+      "Bass Clarinet",
+      "Clarinet",
+      "Contrabass Clarinet",
+      "Bassoon",
+      "Contra Bassoon"
+    ]
+  },
+  {
+    "title": "Cinewinds Core",
+    "company": "Cinesamples",
+    "image": "https://cinesamples.com/img/product/image/small/5vrxdt7r829qky5rd2mpq9232yk.png0",
+    "company Url": "www.cinesamples.com",
+    "rnsemble Patch": "Yes",
+    "price": "349$ +Vat",
+    "sections": ["Piccolo", "Flutes", "Oboe", "Clarinet", "Bassoon"]
   }
 ]
