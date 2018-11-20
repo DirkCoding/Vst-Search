@@ -8,10 +8,23 @@ class DropdownInstruments extends React.Component {
     return (
       <div>
         <label for="Instrument Select">Choose an instrument:</label>
-        <select>
-          {libraryData.map(instrument => (
-            <option>{instrument.sections.map}</option>
-          ))}
+        <select placeholder="Choose an instrument">
+          <option default>Select Instrument</option>
+          {// get list of instruments
+          libraryData
+            .reduce(
+              (instrumentList, libraryItem) =>
+                instrumentList.concat(libraryItem.sections),
+              []
+            )
+            .reduce((instrumentList, instrumentItem) => {
+              if (instrumentList.indexOf(instrumentItem) === -1)
+                instrumentList.push(instrumentItem)
+              return instrumentList
+            }, [])
+            .map(instrument => (
+              <option>{instrument}</option>
+            ))}
         </select>
       </div>
     )
