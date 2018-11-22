@@ -4,7 +4,6 @@ import React, { Component } from 'react'
 
 import DropdownInstruments from './DropdownInstruments'
 import Createcard from './Createcard'
-
 import libraryData from '../resources/library-data.json'
 
 /*import Home from './Home'
@@ -38,8 +37,38 @@ import Config from './Config'*/
     }
   }
 `*/
+/*class CallInstrument extends Component {
+  state = {
+    libraryData: libraryData,
+    DropdownInstruments: ''
+  }
+  chooseInstrument = event => {
+    this.setState({ dropdown: event.target.value })
+  }*/
 
 class App extends Component {
+  state = {
+    libraryData: libraryData,
+    searchfield: ''
+  }
+
+  onSearchChange = event => {
+    this.setState({ searchfield: event.target.value })
+  }
+
+  render() {
+    const filteredLibraryData = this.state.libraryData.filter(data => {
+      return data.sections.includes(this.state.searchfield)
+    })
+
+    return (
+      <React.Fragment>
+        <DropdownInstruments searchChange={this.onSearchChange} />
+        {this.createInformationCard()}
+      </React.Fragment>
+    )
+  }
+
   createInformationCard() {
     return libraryData.map(libraryInformation => (
       <Createcard
@@ -52,15 +81,6 @@ class App extends Component {
         sections={libraryInformation.sections.join('-')}
       />
     ))
-  }
-
-  render() {
-    return (
-      <React.Fragment>
-        <DropdownInstruments />
-        {this.createInformationCard()}
-      </React.Fragment>
-    )
   }
 }
 export default App

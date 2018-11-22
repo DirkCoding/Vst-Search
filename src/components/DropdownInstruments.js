@@ -5,10 +5,11 @@ import libraryData from '../resources/library-data.json'
 
 class DropdownInstruments extends Component {
   render() {
+    const { searchChange } = this.props
     return (
       <div>
-        <label for="Instrument select">Choose an instrument:</label>
-        <select placeholder="Choose an instrument">
+        <label>Choose an instrument:</label>
+        <select onChange={searchChange} placeholder="Choose an instrument">
           <option default>Select Instrument</option>
           {// get list of instruments
           libraryData
