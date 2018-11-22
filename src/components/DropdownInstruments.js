@@ -2,13 +2,26 @@ import React, { Component } from 'react'
 // import styled from 'styled-components'
 import libraryData from '../resources/library-data.json'
 /*import { array } from '@storybook/addon-knobs'*/
+import styled from 'styled-components'
+
+const Dropdown = styled.section`
+  display: grid;
+  display: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-column: 1 / 2;
+`
+const Label = styled.p`
+  font-size: 23px;
+  grid-template-rows: 1fr 1fr;
+`
 
 class DropdownInstruments extends Component {
   render() {
     const { searchChange } = this.props
     return (
-      <div>
-        <label>Choose an instrument:</label>
+      <Dropdown>
+        <Label>Choose an instrument:</Label>
         <select onChange={searchChange} placeholder="Choose an instrument">
           <option default>Select Instrument</option>
           {// get list of instruments
@@ -28,7 +41,7 @@ class DropdownInstruments extends Component {
               <option>{instrument}</option>
             ))}
         </select>
-      </div>
+      </Dropdown>
     )
   }
 }

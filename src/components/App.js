@@ -38,28 +38,20 @@ import Config from './Config'*/
     }
   }
 `*/
-/*class CallInstrument extends Component {
-  state = {
-    libraryData: libraryData,
-    DropdownInstruments: ''
-  }
-  chooseInstrument = event => {
-    this.setState({ dropdown: event.target.value })
-  }*/
 
 class App extends Component {
   state = {
     libraryData: libraryData,
-    searchfield: ''
+    dropdown: ''
   }
 
   onSearchChange = event => {
-    this.setState({ searchfield: event.target.value })
+    this.setState({ dropdown: event.target.value })
   }
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
-      return data.sections.includes(this.state.searchfield)
+      return data.sections.includes(this.state.dropdown)
     })
 
     return (
