@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-
+import PropTypes from 'prop-types'
 const Card = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -49,6 +49,9 @@ const Librarytext = styled.section``
 const Information = styled.section``
 
 class Createcard extends Component {
+  static propTypes = {
+    information: PropTypes.string
+  }
   render() {
     const {
       title,
@@ -63,7 +66,7 @@ class Createcard extends Component {
     return (
       <Card>
         <Information>
-          <Libraryheader>
+          <Libraryheader data-cy="Libraryheader">
             <Title>{title}</Title>
             <Company>{company}</Company>
           </Libraryheader>

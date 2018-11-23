@@ -42,22 +42,35 @@ import Config from './Config'*/
 class App extends Component {
   state = {
     libraryData: libraryData,
-    dropdown: ''
+    dropdown: '',
+    priceSlider: 0
   }
 
+  sliderChange = event => {
+    console.log(event.target.value)
+    this.setState({ priceSlider: event.target.value })
+  }
   onSearchChange = event => {
     this.setState({ dropdown: event.target.value })
   }
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
-      return data.sections.includes(this.state.dropdown)
+      return (
+        data.sections.includes(this.state.dropdown) ||
+        data.price.includes(this.state.priceslider)
+      )
     })
 
+    // const filteredPriceData = this.state.libraryData.filter(value => {
+    //   return value.price.includes(this.state.priceSlider)
+    // })
     return (
       <Home
         filteredLibraryData={filteredLibraryData}
+        // filteredPriceData={filteredPriceData}
         searchChange={this.onSearchChange}
+        sliderChange={this.sliderChange}
       />
     )
   }

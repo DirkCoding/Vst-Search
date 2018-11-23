@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import libraryData from '../resources/library-data.json'
 /*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Dropdown = styled.section`
   display: grid;
@@ -17,6 +18,9 @@ const Label = styled.p`
 `
 
 class DropdownInstruments extends Component {
+  static propTypes = {
+    searchChange: PropTypes.func.isRequired
+  }
   render() {
     const { searchChange } = this.props
     return (

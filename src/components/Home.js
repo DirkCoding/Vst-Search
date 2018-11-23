@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import DropdownInstruments from './DropdownInstruments'
 import Createcard from './Createcard'
+import Priceslider from './Priceslider'
 
 export class Home extends Component {
   render() {
-    const { filteredLibraryData, searchChange } = this.props
+    const { filteredLibraryData, searchChange, sliderChange } = this.props
+
     return (
       <React.Fragment>
         <DropdownInstruments searchChange={searchChange} />
+        <Priceslider sliderChange={sliderChange} />
 
         {filteredLibraryData.map(libraryInformation => (
           <Createcard

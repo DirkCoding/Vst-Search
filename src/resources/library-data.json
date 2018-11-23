@@ -5,7 +5,7 @@
     "image": "http://www.orchestraltools.com/libraries/berlin_brass_files/stacks_image_93.png",
     "url": "www.orchestraltools.com",
     "ensemblepatch": "No",
-    "price": "799€ + Vat",
+    "price": "10",
     "sections": ["Trombones", "Trumpets", "Horns", "Tuba"]
   },
   {
@@ -14,7 +14,7 @@
     "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/331/smc0214_portrait_catview.jpg",
     "url": "www.spitfireaudio.com",
     "ensemblepatch": "No",
-    "price": "699 Euro incl. Vat",
+    "price": "699 ",
     "sections": ["Trombones", "Trumpets", "Horns", "Tuba", "Cimbassi"]
   },
   {
@@ -23,7 +23,7 @@
     "image": "https://cinesamples.com/img/product/image/small/mqdymg34bbtrjhftpp9k0oamk93.png",
     "url": "www.cinesamples.com",
     "ensemblepatch": "No",
-    "price": "399$ +Vat",
+    "price": "399",
     "sections": ["Trombones", "Trumpets", "Horns", "Tuba"]
   },
   {
@@ -32,7 +32,7 @@
     "image": "http://www.orchestraltools.com/libraries/berlin_brass_files/stacks_image_93.png",
     "url": "www.orchestraltools.com",
     "ensemblepatch": "Yes",
-    "price": "840€ +Vat",
+    "price": "840",
     "section Sizes": "8, 6, 5, 5, 4",
     "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
   },
@@ -42,7 +42,7 @@
     "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/357/smc0224_portrait_catview.jpg",
     "url": "www.spitfireaudio.com",
     "ensemblepatch": "Yes",
-    "price": "799€ incl. Vat",
+    "price": "799",
     "section Sizes": "16, 14, 12, 10, 8",
     "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
   },
@@ -52,7 +52,7 @@
     "image": "https://cinesamples.com/img/product/image/small/9jqxx4ebnns3vtjalqzw0dyj972.png",
     "url": "www.cinesamples.com",
     "ensemblepatch": "Yes",
-    "price": "499$ +Vat",
+    "price": "499",
     "section Sizes": "16, 12, 10, 10, 7",
     "sections": ["1. Violins", "2. Violins", "Violas", "Celli", "Basses"]
   },
@@ -62,7 +62,7 @@
     "image": "http://www.orchestraltools.com/libraries/berlin_woodwinds_revive_files/stacks_image_93.png",
     "url": "www.orchestraltools.com",
     "ensemblepatch": "Yes",
-    "price": "649€ +Vat",
+    "price": "649",
     "sections": [
       "Piccolo",
       "Flutes",
@@ -79,7 +79,7 @@
     "image": "https://d1t3zg51rvnesz.cloudfront.net/p/images/cms2/380/smc0215_portrait_catview.jpg",
     "url": "www.spitfireaudio.com",
     "ensemblepatch": "No",
-    "price": "599€ incl. Vat",
+    "price": "599",
     "sections": [
       "Piccolo",
       "Flutes",
@@ -100,7 +100,7 @@
     "image": "https://cinesamples.com/img/product/image/small/5vrxdt7r829qky5rd2mpq9232yk.png0",
     "url": "www.cinesamples.com",
     "ensemblepatch": "Yes",
-    "price": "349$ +Vat",
+    "price": "349",
     "sections": ["Piccolo", "Flutes", "Oboe", "Clarinet", "Bassoon"]
   }
 ]
