@@ -5,12 +5,17 @@ import Priceslider from './Priceslider'
 
 export class Home extends Component {
   render() {
-    const { filteredLibraryData, searchChange, sliderChange } = this.props
+    const {
+      filteredLibraryData,
+      searchChange,
+      sliderChange,
+      priceLimit
+    } = this.props
 
     return (
       <React.Fragment>
         <DropdownInstruments searchChange={searchChange} />
-        <Priceslider sliderChange={sliderChange} />
+        <Priceslider sliderChange={sliderChange} priceLimit={priceLimit} />
 
         {filteredLibraryData.map(libraryInformation => (
           <Createcard

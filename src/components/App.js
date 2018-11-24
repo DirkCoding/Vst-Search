@@ -57,8 +57,8 @@ class App extends Component {
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
-        data.sections.includes(this.state.dropdown) ||
-        data.price.includes(this.state.priceslider)
+        data.sections.includes(this.state.dropdown) &&
+        parseInt(data.price) <= parseInt(this.state.priceSlider)
       )
     })
 
@@ -68,6 +68,7 @@ class App extends Component {
     return (
       <Home
         filteredLibraryData={filteredLibraryData}
+        priceLimit={this.state.priceSlider}
         // filteredPriceData={filteredPriceData}
         searchChange={this.onSearchChange}
         sliderChange={this.sliderChange}
