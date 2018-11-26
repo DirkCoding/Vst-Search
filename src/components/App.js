@@ -43,6 +43,8 @@ class App extends Component {
   state = {
     libraryData: libraryData,
     dropdown: '',
+    manufacturerDropdown: '',
+    libraryDropdown: '',
     priceSlider: 0
   }
 
@@ -54,23 +56,31 @@ class App extends Component {
     this.setState({ dropdown: event.target.value })
   }
 
+  onSearchChangeManu = event => {
+    this.setState({ manufacturerDropdown: event.target.value })
+  }
+  onSearchChangeLib = event => {
+    this.setState({ libraryDropdown: event.target.value })
+  }
+
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
         data.sections.includes(this.state.dropdown) &&
+        data.company.includes(this.state.manufacturerDropdown) &&
+        data.title.includes(this.state.libraryDropdown) &&
         parseInt(data.price) <= parseInt(this.state.priceSlider)
       )
     })
 
-    // const filteredPriceData = this.state.libraryData.filter(value => {
-    //   return value.price.includes(this.state.priceSlider)
-    // })
     return (
       <Home
         filteredLibraryData={filteredLibraryData}
         priceLimit={this.state.priceSlider}
         // filteredPriceData={filteredPriceData}
         searchChange={this.onSearchChange}
+        searchChangeManu={this.onSearchChangeManu}
+        searchChangeLib={this.onSearchChangeLib}
         sliderChange={this.sliderChange}
       />
     )

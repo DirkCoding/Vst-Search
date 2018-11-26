@@ -15,7 +15,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build && rm -rf docs && mv build docs",
-    "deploy": "npm run build && cd docs && now --public",
+    "deploy": "npm run build && now --public",
     "test": "craco test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
