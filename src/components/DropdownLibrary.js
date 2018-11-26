@@ -26,14 +26,14 @@ const Label = styled.p`
 `
 class DropdownLibrary extends Component {
   static propTypes = {
-    searchChangeManu: PropTypes.func.isRequired
+    searchChangeLib: PropTypes.func.isRequired
   }
   render() {
-    const { searchChangeManu } = this.props
+    const { searchChangeLib } = this.props
     return (
       <Dropdown>
         <Label>Choose a library:</Label>
-        <select onChange={searchChangeManu} placeholder="Choose a library">
+        <select onChange={searchChangeLib} placeholder="Choose a library">
           <option default>Select library</option>
           {// get list of instruments
           libraryData
