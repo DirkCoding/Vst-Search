@@ -2,8 +2,14 @@ import React, { Component } from 'react'
 import DropdownInstruments from './DropdownInstruments'
 import DropdownManufacturer from './DropdownManufacturer'
 import DropdownLibrary from './DropdownLibrary'
+import HeaderStyling from './Header'
 import Createcard from './Createcard'
 import Priceslider from './Priceslider'
+import styled from 'styled-components'
+
+const AppWrapper = styled.section`
+  border: 1px solid #000;
+`
 
 export class Home extends Component {
   render() {
@@ -18,22 +24,25 @@ export class Home extends Component {
 
     return (
       <React.Fragment>
-        <DropdownInstruments searchChange={searchChange} />
-        <DropdownManufacturer searchChangeManu={searchChangeManu} />
-        <DropdownLibrary searchChangeLib={searchChangeLib} />
-        <Priceslider sliderChange={sliderChange} priceLimit={priceLimit} />
+        <AppWrapper>
+          <HeaderStyling />
+          <DropdownInstruments searchChange={searchChange} />
+          <DropdownManufacturer searchChangeManu={searchChangeManu} />
+          <DropdownLibrary searchChangeLib={searchChangeLib} />
+          <Priceslider sliderChange={sliderChange} priceLimit={priceLimit} />
 
-        {filteredLibraryData.map(libraryInformation => (
-          <Createcard
-            title={libraryInformation.title}
-            company={libraryInformation.company}
-            image={libraryInformation.image}
-            url={libraryInformation.url}
-            ensemblepatch={libraryInformation.ensemblepatch}
-            price={libraryInformation.price}
-            sections={libraryInformation.sections.join('-')}
-          />
-        ))}
+          {filteredLibraryData.map(libraryInformation => (
+            <Createcard
+              title={libraryInformation.title}
+              company={libraryInformation.company}
+              image={libraryInformation.image}
+              url={libraryInformation.url}
+              ensemblepatch={libraryInformation.ensemblepatch}
+              price={libraryInformation.price}
+              sections={libraryInformation.sections.join('-')}
+            />
+          ))}
+        </AppWrapper>
       </React.Fragment>
     )
   }

@@ -7,9 +7,12 @@ export default createGlobalStyle`
 }
 
 body {
-  
+  display:grid;
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background:rgb(105, 105, 105);
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

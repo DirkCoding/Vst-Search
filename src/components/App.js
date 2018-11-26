@@ -7,6 +7,8 @@ import React, { Component } from 'react'
 import libraryData from '../resources/library-data.json'
 import Home from './Home'
 
+import styled from 'styled-components'
+
 /*import Home from './Home'
 import Config from './Config'*/
 

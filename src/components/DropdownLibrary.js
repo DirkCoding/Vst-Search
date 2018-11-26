@@ -14,7 +14,7 @@ const Dropdown = styled.section`
   margin: 25px auto;
   padding: 10px 25px 25px 25px;
   background: white;
-  max-width: 800px;
+  width: 50vw;
   height: 100px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
@@ -22,7 +22,6 @@ const Dropdown = styled.section`
 `
 const Label = styled.p`
   font-size: 23px;
-  grid-column: 1 / 3;
   grid-column: 1 / 3;
 `
 class DropdownLibrary extends Component {

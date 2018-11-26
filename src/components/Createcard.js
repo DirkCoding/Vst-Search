@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+
 const Card = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,7 +11,7 @@ const Card = styled.section`
   margin: 25px auto;
   padding: 25px;
   background: white;
-  max-width: 800px;
+  max-width: 50vw;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);

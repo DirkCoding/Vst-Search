@@ -10,7 +10,7 @@ const Slidersection = styled.section`
   margin: 25px auto;
   padding: 25px;
   background: white;
-  max-width: 800px;
+  width: 50vw;
   height: 150px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
@@ -20,7 +20,7 @@ const Slidersection = styled.section`
 const Slider = styled.input`
   background: rgb(240, 123, 199);
   border: 1px solid #000;
-  grid-column: 2 / 4;
+  place-items: center;
 `
 const Eurobox = styled.section`
   border: 1px solid #000;
