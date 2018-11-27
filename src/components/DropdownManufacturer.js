@@ -14,7 +14,7 @@ class DropdownManufacturer extends Component {
     return (
       <div>
         <select onChange={searchChangeManu} placeholder="Choose a manufacturer">
-          <option default value="">
+          <option default value="all">
             Select Manufacturer
           </option>
           {// get list of instruments

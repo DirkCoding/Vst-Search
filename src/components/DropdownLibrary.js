@@ -14,7 +14,9 @@ class DropdownLibrary extends Component {
     return (
       <div>
         <select onChange={searchChangeLib} placeholder="Choose a library">
-          <option default>Select library</option>
+          <option value="all" default>
+            Select library
+          </option>
           {// get list of instruments
           libraryData
             .reduce(

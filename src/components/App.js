@@ -49,7 +49,6 @@ class App extends Component {
   }
 
   sliderChange = event => {
-    console.log(event.target.value)
     this.setState({ priceSlider: event.target.value })
   }
   onSearchChange = event => {
@@ -67,9 +66,13 @@ class App extends Component {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
         data.sections.includes(this.state.dropdown) &&
-        data.company.includes(this.state.manufacturerDropdown) &&
-        data.title.includes(this.state.libraryDropdown) &&
-        parseInt(data.price) >= parseInt(this.state.priceSlider)
+        (this.state.manufacturerDropdown === 'all'
+          ? true
+          : data.company.includes(this.state.manufacturerDropdown)) &&
+        (this.state.manufacturerDropdown === 'all'
+          ? true
+          : data.title.includes(this.state.libraryDropdown)) &&
+        parseInt(data.price) <= parseInt(this.state.priceSlider)
       )
     })
 

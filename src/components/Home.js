@@ -11,12 +11,26 @@ import styled from 'styled-components'
 
 export class Home extends Component {
   render() {
-    const { filteredLibraryData } = this.props
+    const {
+      filteredLibraryData,
+      searchChange,
+      searchChangeManu,
+      searchChangeLib,
+      sliderChange,
+      priceLimit
+    } = this.props
 
     return (
       <React.Fragment>
         <Header />
-        <Dropdowns />
+        <Dropdowns
+          filteredLibraryData={filteredLibraryData}
+          priceLimit={priceLimit}
+          searchChange={searchChange}
+          searchChangeManu={searchChangeManu}
+          searchChangeLib={searchChangeLib}
+          sliderChange={sliderChange}
+        />
         {/* <DropdownInstruments searchChange={searchChange} />
           <DropdownManufacturer searchChangeManu={searchChangeManu} />
           <DropdownLibrary searchChangeLib={searchChangeLib} />
