@@ -34,6 +34,7 @@ export class Home extends Component {
           <FooterStyling />
           {filteredLibraryData.map(libraryInformation => (
             <Createcard
+              key={libraryInformation.company + libraryInformation.title}
               title={libraryInformation.title}
               company={libraryInformation.company}
               image={libraryInformation.image}

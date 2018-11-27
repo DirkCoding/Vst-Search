@@ -49,7 +49,7 @@ class DropdownLibrary extends Component {
             }, [])
             .sort((a, b) => (a < b ? -1 : 1))
             .map(library => (
-              <option>{library}</option>
+              <option key={library}>{library}</option>
             ))}
         </select>
       </Dropdown>

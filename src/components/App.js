@@ -71,7 +71,7 @@ class App extends Component {
         data.sections.includes(this.state.dropdown) &&
         data.company.includes(this.state.manufacturerDropdown) &&
         data.title.includes(this.state.libraryDropdown) &&
-        parseInt(data.price) <= parseInt(this.state.priceSlider)
+        parseInt(data.price) >= parseInt(this.state.priceSlider)
       )
     })
 
@@ -79,7 +79,6 @@ class App extends Component {
       <Home
         filteredLibraryData={filteredLibraryData}
         priceLimit={this.state.priceSlider}
-        // filteredPriceData={filteredPriceData}
         searchChange={this.onSearchChange}
         searchChangeManu={this.onSearchChangeManu}
         searchChangeLib={this.onSearchChangeLib}

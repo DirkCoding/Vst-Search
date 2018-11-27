@@ -50,7 +50,7 @@ class DropdownInstruments extends Component {
             }, [])
             .sort((a, b) => (a < b ? -1 : 1))
             .map(instrument => (
-              <option>{instrument}</option>
+              <option key={instrument}>{instrument}</option>
             ))}
         </select>
       </Dropdown>

@@ -35,7 +35,9 @@ class DropdownManufacturer extends Component {
       <Dropdown>
         <Label>Choose a manufacturer:</Label>
         <select onChange={searchChangeManu} placeholder="Choose a manufacturer">
-          <option default>Select Manufacturer</option>
+          <option default value="">
+            Select Manufacturer
+          </option>
           {// get list of instruments
           libraryData
             .reduce(
@@ -50,7 +52,7 @@ class DropdownManufacturer extends Component {
             }, [])
             .sort((a, b) => (a < b ? -1 : 1))
             .map(company => (
-              <option>{company}</option>
+              <option key={company}>{company}</option>
             ))}
         </select>
       </Dropdown>
