@@ -5,16 +5,14 @@ import styled from 'styled-components'
 const FooterStyling = styled.section`
   display: grid;
   margin: 25px auto;
-  padding: 10px 25px 25px 25px;
-  background: white;
+  padding: 10px 25px;
   text-align: center;
-  width: 50vw;
-  height: 100px;
+  width: 90vw;
+  height: 10vh;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border-radius: 8px;
+  border-radius: 18px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
   border: 1px solid #000;
-  background: rgb(220, 220, 220);
 `
 
 const FooterText = styled.p`

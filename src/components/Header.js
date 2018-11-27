@@ -7,20 +7,17 @@ import styled from 'styled-components'
 const Header = styled.section`
   display: grid;
   margin: 25px auto;
-  padding: 10px 25px 25px 25px;
-  background: white;
+  padding: 10px;
   text-align: center;
-  width: 50vw;
-  height: 100px;
-  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border-radius: 8px;
+  width: 40vw;
+  height: 10vh;
+  border-radius: 18px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
   border: 1px solid #000;
-  background: rgb(220, 220, 220);
 `
 
 const Headline = styled.p`
-  font-size: 24px;
+  font-size: 25px;
 `
 
 class HeaderStyling extends Component {

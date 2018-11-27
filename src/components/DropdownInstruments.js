@@ -5,26 +5,6 @@ import libraryData from '../resources/library-data.json'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const Dropdown = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
-  margin: 25px auto;
-  padding: 10px 25px 25px 25px;
-  background: white;
-  width: 50vw;
-  height: 100px;
-  border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border: 1px solid #000;
-`
-const Label = styled.p`
-  font-size: 23px;
-  grid-column: 1 / 3;
-`
-
 class DropdownInstruments extends Component {
   static propTypes = {
     searchChange: PropTypes.func.isRequired
@@ -32,8 +12,7 @@ class DropdownInstruments extends Component {
   render() {
     const { searchChange } = this.props
     return (
-      <Dropdown>
-        <Label>Choose an instrument:</Label>
+      <div>
         <select onChange={searchChange} placeholder="Choose an instrument">
           <option default>Select Instrument</option>
           {// get list of instruments
@@ -53,7 +32,7 @@ class DropdownInstruments extends Component {
               <option key={instrument}>{instrument}</option>
             ))}
         </select>
-      </Dropdown>
+      </div>
     )
   }
 }
