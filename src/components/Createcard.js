@@ -3,11 +3,6 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Card = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  justify-content: center;
   margin: 25px auto;
   padding: 25px;
   background: white;

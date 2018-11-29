@@ -1,9 +1,4 @@
 import React, { Component } from 'react'
-// import styled from 'styled-components'
-// import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom'
-
-// import DropdownInstruments from './DropdownInstruments'
-// import Createcard from './Createcard'
 import libraryData from '../resources/library-data.json'
 import Home from './Home'
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 // import styled from 'styled-components'
 import libraryData from '../resources/library-data.json'
 /*import { array } from '@storybook/addon-knobs'*/
-import styled from 'styled-components'
+// import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 class DropdownLibrary extends Component {
@@ -15,7 +15,7 @@ class DropdownLibrary extends Component {
       <div>
         <select onChange={searchChangeLib} placeholder="Choose a library">
           <option value="all" default>
-            Select library
+            Select Library
           </option>
           {// get list of instruments
           libraryData

@@ -4,16 +4,18 @@ import React, { Component } from 'react'
 /*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 
-const Header = styled.section`
+const Wrapper = styled.section`
   display: grid;
-  margin: 25px auto;
-  padding: 10px;
-  text-align: center;
-  width: 40vw;
-  height: 10vh;
+  grid-template-columns: 300px;
+  justify-content: center;
+  margin: 20px;
+`
+
+const Header = styled.section`
   border-radius: 18px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
   border: 1px solid #000;
+  text-align: center;
 `
 
 const Headline = styled.p`
@@ -23,9 +25,11 @@ const Headline = styled.p`
 class HeaderStyling extends Component {
   render() {
     return (
-      <Header>
-        <Headline>VST-SEARCH</Headline>
-      </Header>
+      <Wrapper>
+        <Header>
+          <Headline>VST-SEARCH</Headline>
+        </Header>
+      </Wrapper>
     )
   }
 }
