@@ -9,11 +9,9 @@ import Config from './Config'*/
   display: grid;
   grid-template-rows: auto 50px;
   height: 100vh;
-
   nav {
     display: flex;
   }
-
   a:any-link {
     display: flex;
     align-items: center;
@@ -22,11 +20,9 @@ import Config from './Config'*/
     color: black;
     width: 100%;
     background: #efefef;
-
     &:first-child {
       border-right: 1px solid white;
     }
-
     &.active {
       background: deeppink;
       color: white;

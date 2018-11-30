@@ -3,7 +3,6 @@ import Header from './Header'
 import Footer from './Footer'
 import Createcard from './Createcard'
 import Dropdowns from './Dropdowns'
-import styled from 'styled-components'
 
 export class Home extends Component {
   render() {
