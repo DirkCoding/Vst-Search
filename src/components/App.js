@@ -79,6 +79,7 @@ class App extends Component {
         searchChangeManu={this.onSearchChangeManu}
         searchChangeLib={this.onSearchChangeLib}
         sliderChange={this.sliderChange}
+        inputChange={this.inputChange}
       />
     )
   }

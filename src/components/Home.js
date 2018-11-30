@@ -3,6 +3,7 @@ import Header from './Header'
 import Footer from './Footer'
 import Createcard from './Createcard'
 import Dropdowns from './Dropdowns'
+import Searchfield from './Searchfield'
 
 export class Home extends Component {
   render() {
@@ -12,12 +13,14 @@ export class Home extends Component {
       searchChangeManu,
       searchChangeLib,
       sliderChange,
-      priceLimit
+      priceLimit,
+      inputChange
     } = this.props
 
     return (
       <React.Fragment>
         <Header />
+        {/* <Searchfield /> */}
         <Dropdowns
           filteredLibraryData={filteredLibraryData}
           priceLimit={priceLimit}
@@ -25,6 +28,7 @@ export class Home extends Component {
           searchChangeManu={searchChangeManu}
           searchChangeLib={searchChangeLib}
           sliderChange={sliderChange}
+          inputChange={inputChange}
         />
 
         {filteredLibraryData.map(libraryInformation => (
