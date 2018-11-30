@@ -36,7 +36,8 @@ class App extends Component {
     dropdown: '',
     manufacturerDropdown: '',
     libraryDropdown: '',
-    priceSlider: 0
+    priceSlider: 0,
+    inputField: ''
   }
 
   sliderChange = event => {
@@ -51,6 +52,9 @@ class App extends Component {
   }
   onSearchChangeLib = event => {
     this.setState({ libraryDropdown: event.target.value })
+  }
+  inputChange = event => {
+    this.setState({ inputField: event.target.value })
   }
 
   render() {

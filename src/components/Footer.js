@@ -19,7 +19,6 @@ const FooterStyling = styled.section`
   position: fixed;
   bottom: 0;
   width: 100%;
-  opacity: 100%;
 `
 
 const FooterText = styled.p`
