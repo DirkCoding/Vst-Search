@@ -9,10 +9,18 @@ const SelectWrapper = styled.section`
   font-family: fontello;
   content: '\f107';
   font-size: 20px;
-
   right: 15px;
   top: 10px;
   color: #fff;
+  ::before {
+    font-family: fontello;
+    content: '\f107';
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #fff;
+  }
 `
 
 const Select = styled.select`
