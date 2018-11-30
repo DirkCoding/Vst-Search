@@ -12,9 +12,10 @@ const Wrapper = styled.section`
 `
 
 const Header = styled.section`
-  border-radius: 18px;
-  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border: 1px solid #000;
+  /* border-radius: 18px;
+  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4); */
+  border-bottom: 1px solid #000;
+  border-color: rgb(184, 134, 11);
   text-align: center;
 `
 
