@@ -49,7 +49,9 @@ class DropdownInstruments extends Component {
     return (
       <SelectWrapper>
         <Select onChange={searchChange} placeholder="Choose an instrument">
-          <option default>Select Instrument</option>
+          <option value="all" default>
+            Select Instrument
+          </option>
           {// get list of instruments
           libraryData
             .reduce(

@@ -33,9 +33,9 @@ import Config from './Config'*/
 class App extends Component {
   state = {
     libraryData: libraryData,
-    dropdown: '',
-    manufacturerDropdown: '',
-    libraryDropdown: '',
+    dropdown: 'all',
+    manufacturerDropdown: 'all',
+    libraryDropdown: 'all',
     priceSlider: 0,
     inputField: ''
   }
@@ -59,12 +59,18 @@ class App extends Component {
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
+      console.log('hello')
+      console.log(this.state.dropdown === 'all')
+      console.log(this.state.manufacturerDropdown === 'all')
+      console.log(this.state.libraryDropdown === 'all')
       return (
-        data.sections.includes(this.state.dropdown) &&
+        (this.state.dropdown === 'all'
+          ? true
+          : data.sections.includes(this.state.dropdown)) &&
         (this.state.manufacturerDropdown === 'all'
           ? true
           : data.company.includes(this.state.manufacturerDropdown)) &&
-        (this.state.manufacturerDropdown === 'all'
+        (this.state.libraryDropdown === 'all'
           ? true
           : data.title.includes(this.state.libraryDropdown)) &&
         parseInt(data.price) <= parseInt(this.state.priceSlider)
