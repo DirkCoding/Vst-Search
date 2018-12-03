@@ -35,7 +35,7 @@ const Image = styled.img`
   height: 150px;
   background-position: 50% 50%;
   background-size: cover;
-  grid-column: 1 / 2;
+  grid-column: 2/ 3;
   grid-row: 1 / 4;
   margin: 20px;
 `

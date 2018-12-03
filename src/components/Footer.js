@@ -15,6 +15,7 @@ const FooterStyling = styled.section`
   border-radius: 18px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4); */
   border: 1px solid #000;
+  background: rgb(245, 222, 179);
   border-color: rgb(184, 134, 11);
   position: fixed;
   bottom: 0;
