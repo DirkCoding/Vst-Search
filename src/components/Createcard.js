@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 const Card = styled.section`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 25px auto;
   padding: 25px;
   background: white;
@@ -37,7 +38,9 @@ const Image = styled.img`
   margin-top: 20px;
 `
 
-const Libraryheader = styled.section``
+const Libraryheader = styled.section`
+  justify-content: center;
+`
 const Librarytext = styled.section``
 const Information = styled.section``
 
@@ -58,6 +61,7 @@ class Createcard extends Component {
 
     return (
       <Card>
+        <Image src={image} />
         <Information>
           <Libraryheader data-cy="Libraryheader">
             <Title>{title}</Title>
@@ -70,7 +74,6 @@ class Createcard extends Component {
             <Hyperlink>Link to manufacturer: {url}</Hyperlink>
           </Librarytext>
         </Information>
-        <Image src={image} />
       </Card>
     )
   }
