@@ -3,10 +3,13 @@ import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
 const Card = styled.section`
+  display: flex;
+  flex-wrap: wrap;
   margin: 25px auto;
   padding: 25px;
   background: white;
-  max-width: 50vw;
+  max-width: 100vh;
+  min-width: 150px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
@@ -15,29 +18,23 @@ const Card = styled.section`
 
 const Title = styled.h1`
   font-size: 23px;
-  grid-column: 2 / 3;
 `
 const Company = styled.h2`
   font-size: 18px;
-  grid-column: 2 / 3;
 `
 const Paragraph = styled.p`
   font-size: 12px;
-  grid-column: 2 / 3;
 `
 
 const Hyperlink = styled.a`
   font-size: 12px;
-  grid-column: 2 / 3;
 `
 const Image = styled.img`
   width: 150px;
   height: 150px;
   background-position: 50% 50%;
   background-size: cover;
-  grid-column: 2/ 3;
-  grid-row: 1 / 4;
-  margin: 20px;
+  margin-top: 20px;
 `
 
 const Libraryheader = styled.section``
