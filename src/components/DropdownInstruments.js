@@ -34,8 +34,9 @@ const Select = styled.select`
   border: 1px solid;
   border-color: rgb(184, 134, 11);
   font-size: 12px;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  box-shadow: 0 8px 16px rgba(211, 211, 211, 0.2);
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 8px;
   outline: none;
   cursor: pointer;
 `

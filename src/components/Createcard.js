@@ -4,17 +4,17 @@ import PropTypes from 'prop-types'
 
 const Card = styled.section`
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: row;
   margin: 25px auto;
   padding: 25px;
+  height: auto;
   background: white;
   max-width: 100vh;
-  min-width: 150px;
-  height: auto;
+  min-width: 100px;
   border-radius: 8px;
-  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border: 1px solid #000;
+  box-shadow: 0 8px 16px rgba(211, 211, 211, 0.4);
+  border: 1px solid rgb(211, 211, 211);
+  background: rgb(220 220 220);
 `
 
 const Title = styled.h1`
@@ -25,24 +25,29 @@ const Company = styled.h2`
 `
 const Paragraph = styled.p`
   font-size: 12px;
+  white-space: pre-line;
 `
 
 const Hyperlink = styled.a`
   font-size: 12px;
 `
 const Image = styled.img`
-  width: 150px;
-  height: 150px;
-  background-position: 50% 50%;
+  justify-content: flex-start;
   background-size: cover;
-  margin-top: 20px;
+  padding-right: 10px;
+  padding-top: 10px;
+  max-width: 170px;
+  max-height: 210px;
 `
 
 const Libraryheader = styled.section`
-  justify-content: center;
+  /* justify-content: center; */
 `
 const Librarytext = styled.section``
-const Information = styled.section``
+const Information = styled.section`
+  justify-content: space-between;
+  padding-left: 10px;
+`
 
 class Createcard extends Component {
   static propTypes = {
@@ -68,8 +73,8 @@ class Createcard extends Component {
             <Company>{company}</Company>
           </Libraryheader>
           <Librarytext>
-            <Paragraph>Instruments included: {sections}</Paragraph>
-            <Paragraph>Ensemble Patch available: {ensemblepatch}</Paragraph>
+            <Paragraph>Instruments included:{sections}</Paragraph>
+            <Paragraph>Ensemble Patch available:{ensemblepatch}</Paragraph>
             <Paragraph>Price: {price}</Paragraph>
             <Hyperlink>Link to manufacturer: {url}</Hyperlink>
           </Librarytext>

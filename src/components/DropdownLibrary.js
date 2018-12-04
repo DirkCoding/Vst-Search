@@ -7,7 +7,6 @@ import PropTypes from 'prop-types'
 
 const SelectWrapper = styled.section`
   font-family: fontello;
-  content: '\f107';
   font-size: 20px;
   right: 15px;
   top: 10px;
@@ -19,7 +18,6 @@ const SelectWrapper = styled.section`
     position: absolute;
     right: 15px;
     top: 10px;
-    color: #fff;
   }
 `
 
@@ -30,12 +28,11 @@ const Select = styled.select`
   width: 100%;
   /* height: 25px; */
   padding: 5px;
-  color: black;
   border: 1px solid;
-  border-color: rgb(184, 134, 11);
   font-size: 12px;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(211, 211, 211, 0.2);
+  border: 1px solid rgb(211, 211, 211);
   outline: none;
   cursor: pointer;
 `

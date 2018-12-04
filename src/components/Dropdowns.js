@@ -14,6 +14,7 @@ const DropdownWrapper = styled.section`
   padding: 20px;
   margin: auto;
   height: 25%;
+  border-radius: 8px;
 `
 
 export class Dropdowns extends Component {
