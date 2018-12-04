@@ -49,11 +49,16 @@ const Information = styled.section`
 `
 const Hyperlink = styled.a`
   font-size: 12px;
+  color: rgb(105, 105, 105);
 `
 
 const Price = styled.span`
   flex-direction: flex-end;
   display: inline;
+`
+
+const Content = styled.span`
+  font-weight: bold;
 `
 
 class Createcard extends Component {
@@ -80,15 +85,18 @@ class Createcard extends Component {
             <Company>{company}</Company>
           </Libraryheader>
           <Librarytext>
-            <Paragraph>Instruments included: {sections}</Paragraph>
-            <Paragraph>Ensemble Patch available: {ensemblepatch}</Paragraph>
             <Paragraph>
-              Price in Euro:<Price> {price}</Price>
+              <Content>Instruments included:</Content> {sections}
             </Paragraph>
-            <Hyperlink>
-              <a href="/{url}" target="_blank">
-                Order here
-              </a>
+            <Paragraph>
+              <Content>Ensemble Patch available:</Content> {ensemblepatch}
+            </Paragraph>
+            <Paragraph>
+              <Content>Price in Euro:</Content>
+              <Price> {price}</Price>
+            </Paragraph>
+            <Hyperlink href={url} target="_blank">
+              Order here
             </Hyperlink>
           </Librarytext>
         </Information>
