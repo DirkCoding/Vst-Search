@@ -24,13 +24,11 @@ const Company = styled.h2`
   font-size: 18px;
 `
 const Paragraph = styled.p`
+  flex-direction: row;
   font-size: 12px;
   white-space: pre-line;
 `
 
-const Hyperlink = styled.a`
-  font-size: 12px;
-`
 const Image = styled.img`
   justify-content: flex-start;
   background-size: cover;
@@ -44,9 +42,18 @@ const Libraryheader = styled.section`
   /* justify-content: center; */
 `
 const Librarytext = styled.section``
+
 const Information = styled.section`
   justify-content: space-between;
   padding-left: 10px;
+`
+const Hyperlink = styled.a`
+  font-size: 12px;
+`
+
+const Price = styled.span`
+  flex-direction: flex-end;
+  display: inline;
 `
 
 class Createcard extends Component {
@@ -73,10 +80,16 @@ class Createcard extends Component {
             <Company>{company}</Company>
           </Libraryheader>
           <Librarytext>
-            <Paragraph>Instruments included:{sections}</Paragraph>
-            <Paragraph>Ensemble Patch available:{ensemblepatch}</Paragraph>
-            <Paragraph>Price: {price}</Paragraph>
-            <Hyperlink>Link to manufacturer: {url}</Hyperlink>
+            <Paragraph>Instruments included: {sections}</Paragraph>
+            <Paragraph>Ensemble Patch available: {ensemblepatch}</Paragraph>
+            <Paragraph>
+              Price in Euro:<Price> {price}</Price>
+            </Paragraph>
+            <Hyperlink>
+              <a href="/{url}" target="_blank">
+                Order here
+              </a>
+            </Hyperlink>
           </Librarytext>
         </Information>
       </Card>
