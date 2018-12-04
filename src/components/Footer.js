@@ -10,9 +10,6 @@ const Wrapper = styled.section`
 
 const FooterStyling = styled.section`
   text-align: center;
-  /* box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4);
-  border-radius: 18px;
-  box-shadow: 0 8px 16px rgba(180, 180, 180, 0.4); */
   background: rgb(255, 255, 240);
   position: fixed;
   bottom: 0;

@@ -1,35 +1,6 @@
 import React, { Component } from 'react'
 import libraryData from '../resources/library-data.json'
 import Home from './Home'
-
-/*import Home from './Home'
-import Config from './Config'*/
-
-/*const Wrapper = styled.section`
-  display: grid;
-  grid-template-rows: auto 50px;
-  height: 100vh;
-  nav {
-    display: flex;
-  }
-  a:any-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: black;
-    width: 100%;
-    background: #efefef;
-    &:first-child {
-      border-right: 1px solid white;
-    }
-    &.active {
-      background: deeppink;
-      color: white;
-    }
-  }
-`*/
-
 class App extends Component {
   state = {
     libraryData: libraryData,

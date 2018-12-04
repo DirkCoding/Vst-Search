@@ -4,6 +4,11 @@ import libraryData from '../resources/library-data.json'
 /*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChevronDown)
 
 const SelectWrapper = styled.section`
   font-family: fontello;
@@ -49,6 +54,7 @@ class DropdownLibrary extends Component {
           <option value="all" default>
             Select Library
           </option>
+
           {// get list of instruments
           libraryData
             .reduce(
@@ -66,6 +72,7 @@ class DropdownLibrary extends Component {
               <option key={library}>{library}</option>
             ))}
         </Select>
+        <FontAwesomeIcon icon="chevron-down" />
       </SelectWrapper>
     )
   }

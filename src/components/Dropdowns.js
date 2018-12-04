@@ -4,6 +4,11 @@ import DropdownManufacturer from './DropdownManufacturer'
 import DropdownInstruments from './DropdownInstruments'
 import DropdownLibrary from './DropdownLibrary'
 import Priceslider from './Priceslider'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChevronDown)
 
 const DropdownWrapper = styled.section`
   display: grid;
