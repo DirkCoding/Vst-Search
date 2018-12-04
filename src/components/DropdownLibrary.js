@@ -27,9 +27,9 @@ const SelectWrapper = styled.section`
 `
 
 const Select = styled.select`
-  -moz-appearance: none;
+  /* -moz-appearance: none;
   -webkit-appearance: none;
-  appearance: none;
+  appearance: none; */
   width: 100%;
   /* height: 25px; */
   padding: 5px;
@@ -40,6 +40,7 @@ const Select = styled.select`
   border: 1px solid rgb(211, 211, 211);
   outline: none;
   cursor: pointer;
+  position: relative;
 `
 
 class DropdownLibrary extends Component {
