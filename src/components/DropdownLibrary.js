@@ -27,11 +27,7 @@ const SelectWrapper = styled.section`
 `
 
 const Select = styled.select`
-  /* -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none; */
   width: 100%;
-  /* height: 25px; */
   padding: 5px;
   border: 1px solid;
   font-size: 12px;
