@@ -57,23 +57,23 @@ class App extends Component {
     this.setState({ inputField: event.target.value })
   }
 
-  checkForInputField = (libraryData, searchTerm) => {
-    for (var attribute in libraryData) {
-      if (
-        libraryData.hasOwnProperty(attribute) &&
-        libraryData.attribute.includes(searchTerm)
-      )
-        return true
-    }
-    return false
-  }
+  // // checkForInputField = (libraryData, searchTerm) => {
+  // //   for (var attribute in libraryData) {
+  // //     if (
+  // //       libraryData.hasOwnProperty(attribute) &&
+  // //       libraryData.attribute.includes(searchTerm)
+  // //     )
+  // //       return true
+  // //   }
+  // //   return false
+  // }
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
-      console.log('hello')
-      console.log(this.state.dropdown === 'all')
-      console.log(this.state.manufacturerDropdown === 'all')
-      console.log(this.state.libraryDropdown === 'all')
+      // console.log('hello')
+      // console.log(this.state.dropdown === 'all')
+      // console.log(this.state.manufacturerDropdown === 'all')
+      // console.log(this.state.libraryDropdown === 'all')
       return (
         (this.state.dropdown === 'all'
           ? true
@@ -84,9 +84,10 @@ class App extends Component {
         (this.state.libraryDropdown === 'all'
           ? true
           : data.title.includes(this.state.libraryDropdown)) &&
-        parseInt(data.price) <= parseInt(this.state.priceSlider) &&
-        this.state.inputField !== '' &&
-        this.checkForInputField(data, this.state.inputField)
+        parseInt(data.price) <= parseInt(this.state.priceSlider)
+        // &&
+        // // this.state.inputField !== '' &&
+        // // this.checkForInputField(data, this.state.inputField)
       )
     })
 
@@ -98,7 +99,7 @@ class App extends Component {
         searchChangeManu={this.onSearchChangeManu}
         searchChangeLib={this.onSearchChangeLib}
         sliderChange={this.sliderChange}
-        inputChange={this.inputChange}
+        // inputChange={this.inputChange}
       />
     )
   }

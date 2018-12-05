@@ -13,14 +13,14 @@ export class Home extends Component {
       searchChangeManu,
       searchChangeLib,
       sliderChange,
-      priceLimit,
-      inputChange
+      priceLimit
+      // inputChange
     } = this.props
 
     return (
       <React.Fragment>
         <Header />
-        {/* <Searchfield /> */}
+        <Searchfield /*inputChange={inputChange}*/ />
         <Dropdowns
           filteredLibraryData={filteredLibraryData}
           priceLimit={priceLimit}
@@ -28,7 +28,6 @@ export class Home extends Component {
           searchChangeManu={searchChangeManu}
           searchChangeLib={searchChangeLib}
           sliderChange={sliderChange}
-          inputChange={inputChange}
         />
 
         {filteredLibraryData.map(libraryInformation => (
