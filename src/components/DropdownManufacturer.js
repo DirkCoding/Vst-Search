@@ -24,9 +24,6 @@ const SelectWrapper = styled.section`
 `
 
 const Select = styled.select`
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   width: 100%;
   padding: 5px;
   color: black;
