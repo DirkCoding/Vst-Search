@@ -20,7 +20,7 @@ export class Home extends Component {
     return (
       <React.Fragment>
         <Header />
-        {/* <Searchfield /> */}
+        <Searchfield inputChange={inputChange} />
         <Dropdowns
           filteredLibraryData={filteredLibraryData}
           priceLimit={priceLimit}

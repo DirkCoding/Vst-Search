@@ -27,6 +27,16 @@ class App extends Component {
   inputChange = event => {
     this.setState({ inputField: event.target.value })
   }
+  checkForInputField = (libraryData, searchTerm) => {
+    for (var attribute in libraryData) {
+      if (
+        libraryData.hasOwnProperty(attribute) &&
+        libraryData.attribute.includes(searchTerm)
+      )
+        return true
+    }
+    return false
+  }
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
@@ -44,7 +54,9 @@ class App extends Component {
         (this.state.libraryDropdown === 'all'
           ? true
           : data.title.includes(this.state.libraryDropdown)) &&
-        parseInt(data.price) <= parseInt(this.state.priceSlider)
+        parseInt(data.price) <= parseInt(this.state.priceSlider) &&
+        this.state.inputField !== '' &&
+        this.checkForInputField(data, this.state.inputField)
       )
     })
 
