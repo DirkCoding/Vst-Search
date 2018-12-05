@@ -24,26 +24,12 @@ class App extends Component {
   onSearchChangeLib = event => {
     this.setState({ libraryDropdown: event.target.value })
   }
-  inputChange = event => {
+  onInputChange = event => {
     this.setState({ inputField: event.target.value })
-  }
-  checkForInputField = (libraryData, searchTerm) => {
-    for (var attribute in libraryData) {
-      if (
-        libraryData.hasOwnProperty(attribute) &&
-        libraryData.attribute.includes(searchTerm)
-      )
-        return true
-    }
-    return false
   }
 
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
-      console.log('hello')
-      console.log(this.state.dropdown === 'all')
-      console.log(this.state.manufacturerDropdown === 'all')
-      console.log(this.state.libraryDropdown === 'all')
       return (
         (this.state.dropdown === 'all'
           ? true
@@ -55,8 +41,11 @@ class App extends Component {
           ? true
           : data.title.includes(this.state.libraryDropdown)) &&
         parseInt(data.price) <= parseInt(this.state.priceSlider) &&
-        this.state.inputField !== '' &&
-        this.checkForInputField(data, this.state.inputField)
+        (this.state.inputField === 'all'
+          ? true
+          : data.title
+              .toLowerCase()
+              .includes(this.state.inputField.toLowerCase()))
       )
     })
 
@@ -68,7 +57,7 @@ class App extends Component {
         searchChangeManu={this.onSearchChangeManu}
         searchChangeLib={this.onSearchChangeLib}
         sliderChange={this.sliderChange}
-        inputChange={this.inputChange}
+        onInputChange={this.onInputChange}
       />
     )
   }

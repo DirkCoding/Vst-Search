@@ -28,13 +28,13 @@ const SearchForm = styled.input`
 
 class Searchfield extends Component {
   render() {
-    const { inputChange } = this.props
+    const { onInputChange } = this.props
     return (
       <SearchFormWrapper>
         <SearchForm
           type="text"
           placeholder="Search item"
-          onChange={inputChange}
+          onChange={onInputChange}
         />
       </SearchFormWrapper>
     )
