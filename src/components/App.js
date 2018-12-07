@@ -7,7 +7,7 @@ class App extends Component {
     dropdown: 'all',
     manufacturerDropdown: 'all',
     libraryDropdown: 'all',
-    priceSlider: 0,
+    priceSlider: 899,
     inputField: ''
   }
 

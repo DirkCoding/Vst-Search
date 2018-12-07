@@ -29,10 +29,17 @@ const Eurobox = styled.section`
 class Priceslider extends Component {
   render() {
     const { sliderChange, priceLimit } = this.props
+
     return (
       <SliderWrapper>
         <Eurobox> max price in Euro: {priceLimit}</Eurobox>
-        <Slider onChange={sliderChange} type="range" max="1000" />
+        <Slider
+          onChange={sliderChange}
+          type="range"
+          min="349"
+          max="1000"
+          value="900"
+        />
       </SliderWrapper>
     )
   }

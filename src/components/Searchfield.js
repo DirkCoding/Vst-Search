@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import libraryData from '../resources/library-data.json'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const SearchFormWrapper = styled.section`
