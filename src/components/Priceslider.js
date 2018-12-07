@@ -33,13 +33,7 @@ class Priceslider extends Component {
     return (
       <SliderWrapper>
         <Eurobox> max price in Euro: {priceLimit}</Eurobox>
-        <Slider
-          onChange={sliderChange}
-          type="range"
-          min="349"
-          max="1000"
-          value="900"
-        />
+        <Slider onChange={sliderChange} type="range" min="349" max="1000" />
       </SliderWrapper>
     )
   }

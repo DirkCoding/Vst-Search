@@ -31,26 +31,27 @@ class App extends Component {
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
-        ((this.state.dropdown === 'all'
+        (this.state.dropdown === 'all'
           ? true
           : data.sections.includes(this.state.dropdown)) &&
-          (this.state.manufacturerDropdown === 'all'
-            ? true
-            : data.company.includes(this.state.manufacturerDropdown)) &&
-          (this.state.libraryDropdown === 'all'
-            ? true
-            : data.title.includes(this.state.libraryDropdown)) &&
-          parseInt(data.price) <= parseInt(this.state.priceSlider) &&
-          (this.state.inputField === 'all'
-            ? true
-            : data.title
-                .toLowerCase()
-                .includes(this.state.inputField.toLowerCase()))) ||
+        (this.state.manufacturerDropdown === 'all'
+          ? true
+          : data.company.includes(this.state.manufacturerDropdown)) &&
+        (this.state.libraryDropdown === 'all'
+          ? true
+          : data.title.includes(this.state.libraryDropdown)) &&
+        parseInt(data.price) <= parseInt(this.state.priceSlider) &&
         (this.state.inputField === 'all'
           ? true
-          : data.company
+          : data.title
               .toLowerCase()
               .includes(this.state.inputField.toLowerCase()))
+        //       ||
+        // (this.state.inputField === 'all'
+        // ? true
+        // : data.company
+        //     .toLowerCase()
+        //     .includes(this.state.inputField.toLowerCase()))
         // ||
         // (this.state.inputField === 'all'
         //   ? true
