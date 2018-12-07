@@ -31,7 +31,7 @@ class Searchfield extends Component {
       <SearchFormWrapper>
         <SearchForm
           type="text"
-          placeholder="Search item"
+          placeholder="Search items"
           onChange={onInputChange}
         />
       </SearchFormWrapper>
