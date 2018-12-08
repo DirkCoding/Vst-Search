@@ -31,13 +31,11 @@ class App extends Component {
   checkSections = instruments => {
     let matches = false
     instruments.forEach(instrument => {
-      console.log('Checking instrument: ' + instrument)
       if (
         instrument
           .toLowerCase()
           .includes(this.state.inputField.trim().toLowerCase())
       ) {
-        console.log('Match found')
         matches = true
       }
     })
@@ -79,6 +77,7 @@ class App extends Component {
         sliderChange={this.sliderChange}
         sliderValue={this.sliderValue}
         onInputChange={this.onInputChange}
+        manufacturerDropdown={this.state.manufacturerDropdown}
       />
     )
   }

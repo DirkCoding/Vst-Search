@@ -14,7 +14,8 @@ export class Home extends Component {
       searchChangeLib,
       sliderChange,
       priceLimit,
-      onInputChange
+      onInputChange,
+      manufacturerDropdown
     } = this.props
 
     return (
@@ -28,6 +29,7 @@ export class Home extends Component {
           searchChangeManu={searchChangeManu}
           searchChangeLib={searchChangeLib}
           sliderChange={sliderChange}
+          manufacturerDropdown={manufacturerDropdown}
         />
 
         {filteredLibraryData.map(libraryInformation => (
@@ -39,7 +41,7 @@ export class Home extends Component {
             url={libraryInformation.url}
             ensemblepatch={libraryInformation.ensemblepatch}
             price={libraryInformation.price}
-            sections={libraryInformation.sections.join('-')}
+            sections={libraryInformation.sections.join(' - ')}
           />
         ))}
         <Footer />
