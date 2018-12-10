@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-// import styled from 'styled-components'
-
-/*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 
 const Wrapper = styled.section`

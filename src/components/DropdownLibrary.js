@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import styled from 'styled-components'
 import libraryData from '../resources/library-data.json'
-/*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { library } from '@fortawesome/fontawesome-svg-core'

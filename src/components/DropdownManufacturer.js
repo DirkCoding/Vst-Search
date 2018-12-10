@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import styled from 'styled-components'
 import libraryData from '../resources/library-data.json'
-/*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
@@ -48,10 +46,8 @@ class DropdownManufacturer extends Component {
         <Select onChange={searchChangeManu} placeholder="Choose a manufacturer">
           <option default value="all">
             Select Manufacturer
-            {/* <FontAwesomeIcon icon="faStroopwafel" /> */}
           </option>
-          {// get list of instruments
-          libraryData
+          {libraryData
             .reduce(
               (manufacturerList, companyItem) =>
                 manufacturerList.concat(companyItem.company),
