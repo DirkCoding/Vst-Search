@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-// import styled from 'styled-components'
 import libraryData from '../resources/library-data.json'
-/*import { array } from '@storybook/addon-knobs'*/
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -44,7 +42,7 @@ class DropdownLibrary extends Component {
     searchChangeLib: PropTypes.func.isRequired
   }
   render() {
-    const { searchChangeLib } = this.props
+    const { searchChangeLib, manufacturerDropdown } = this.props
     return (
       <SelectWrapper>
         <Select onChange={searchChangeLib} placeholder="Choose a library">
@@ -52,11 +50,14 @@ class DropdownLibrary extends Component {
             Select Library
           </option>
 
-          {// get list of instruments
+          {// get list of libraries
           libraryData
             .reduce(
               (libraryList, libraryItem) =>
-                libraryList.concat(libraryItem.title),
+                libraryList.concat({
+                  title: libraryItem.title,
+                  manufacturer: libraryItem.company
+                }),
               []
             )
             .reduce((libraryList, libraryItem) => {
@@ -64,10 +65,17 @@ class DropdownLibrary extends Component {
                 libraryList.push(libraryItem)
               return libraryList
             }, [])
-            .sort((a, b) => (a < b ? -1 : 1))
-            .map(library => (
-              <option key={library}>{library}</option>
-            ))}
+            .sort((a, b) => (a.title < b.title ? -1 : 1))
+            .map(library =>
+              manufacturerDropdown === library.manufacturer ||
+              manufacturerDropdown === 'all' ? (
+                <option key={library.title}>{library.title}</option>
+              ) : (
+                <option key={library.title} disabled>
+                  {library.title}
+                </option>
+              )
+            )}
         </Select>
         <FontAwesomeIcon icon="chevron-down" />
       </SelectWrapper>

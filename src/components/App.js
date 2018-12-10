@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import libraryData from '../resources/library-data.json'
 import Home from './Home'
+
 class App extends Component {
   state = {
     libraryData: libraryData,
@@ -28,6 +29,20 @@ class App extends Component {
     this.setState({ inputField: event.target.value })
   }
 
+  checkSections = instruments => {
+    let matches = false
+    instruments.forEach(instrument => {
+      if (
+        instrument
+          .toLowerCase()
+          .includes(this.state.inputField.trim().toLowerCase())
+      ) {
+        matches = true
+      }
+    })
+    return matches
+  }
+
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
@@ -41,23 +56,15 @@ class App extends Component {
           ? true
           : data.title.includes(this.state.libraryDropdown)) &&
         parseInt(data.price) <= parseInt(this.state.priceSlider) &&
-        (this.state.inputField === 'all'
+        (this.state.inputField.trim() === ''
           ? true
           : data.title
               .toLowerCase()
-              .includes(this.state.inputField.toLowerCase()))
-        //       ||
-        // (this.state.inputField === 'all'
-        // ? true
-        // : data.company
-        //     .toLowerCase()
-        //     .includes(this.state.inputField.toLowerCase()))
-        // ||
-        // (this.state.inputField === 'all'
-        //   ? true
-        //   : data.sections
-        //       .toLowerCase()
-        //       .includes(this.state.inputField.toLowerCase()))
+              .includes(this.state.inputField.trim().toLowerCase()) ||
+            data.company
+              .toLowerCase()
+              .includes(this.state.inputField.trim().toLowerCase()) ||
+            this.checkSections(data.sections))
       )
     })
 
@@ -71,6 +78,7 @@ class App extends Component {
         sliderChange={this.sliderChange}
         sliderValue={this.sliderValue}
         onInputChange={this.onInputChange}
+        manufacturerDropdown={this.state.manufacturerDropdown}
       />
     )
   }

@@ -24,13 +24,17 @@ export class Dropdowns extends Component {
       searchChangeManu,
       searchChangeLib,
       sliderChange,
-      priceLimit
+      priceLimit,
+      manufacturerDropdown
     } = this.props
     return (
       <DropdownWrapper>
         <DropdownInstruments searchChange={searchChange} />
         <DropdownManufacturer searchChangeManu={searchChangeManu} />
-        <DropdownLibrary searchChangeLib={searchChangeLib} />
+        <DropdownLibrary
+          searchChangeLib={searchChangeLib}
+          manufacturerDropdown={manufacturerDropdown}
+        />
         <Priceslider
           sliderChange={sliderChange}
           priceLimit={priceLimit}
