@@ -29,14 +29,21 @@ class App extends Component {
     this.setState({ inputField: event.target.value })
   }
 
-  checkSections = instruments => {
+  filterByDropdown = (dataField, dropdownSelection) => {
+    return dropdownSelection === 'all'
+      ? true
+      : dataField.includes(dropdownSelection)
+  }
+
+  filterByInputField = (dataAttribute, input) => {
+    input = input.trim().toLowerCase()
+    return input === '' ? true : dataAttribute.toLowerCase().includes(input)
+  }
+
+  filterAllByInputField = (dataAttributeOfTypeList, input) => {
     let matches = false
-    instruments.forEach(instrument => {
-      if (
-        instrument
-          .toLowerCase()
-          .includes(this.state.inputField.trim().toLowerCase())
-      ) {
+    dataAttributeOfTypeList.forEach(item => {
+      if (this.filterByInputField(item, input)) {
         matches = true
       }
     })
@@ -46,25 +53,13 @@ class App extends Component {
   render() {
     const filteredLibraryData = this.state.libraryData.filter(data => {
       return (
-        (this.state.dropdown === 'all'
-          ? true
-          : data.sections.includes(this.state.dropdown)) &&
-        (this.state.manufacturerDropdown === 'all'
-          ? true
-          : data.company.includes(this.state.manufacturerDropdown)) &&
-        (this.state.libraryDropdown === 'all'
-          ? true
-          : data.title.includes(this.state.libraryDropdown)) &&
+        this.filterByDropdown(data.sections, this.state.dropdown) &&
+        this.filterByDropdown(data.company, this.state.manufacturerDropdown) &&
+        this.filterByDropdown(data.title, this.state.libraryDropdown) &&
         parseInt(data.price) <= parseInt(this.state.priceSlider) &&
-        (this.state.inputField.trim() === ''
-          ? true
-          : data.title
-              .toLowerCase()
-              .includes(this.state.inputField.trim().toLowerCase()) ||
-            data.company
-              .toLowerCase()
-              .includes(this.state.inputField.trim().toLowerCase()) ||
-            this.checkSections(data.sections))
+        (this.filterByInputField(data.title, this.state.inputField) ||
+          this.filterByInputField(data.company, this.state.inputField) ||
+          this.filterAllByInputField(data.sections, this.state.inputField))
       )
     })
 
